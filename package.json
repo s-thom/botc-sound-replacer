@@ -16,8 +16,8 @@
     "extension": "^2.0.0-rc.38"
   },
   "scripts": {
-    "dev": "extension dev",
+    "dev": "extension dev --browser=firefox",
     "start": "extension start",
-    "build": "extension build"
+    "build": "extension build --browser=all"
   }
 }

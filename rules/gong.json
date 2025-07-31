@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/sounds/quack_5.mp3"
+      }
+    },
+    "condition": {
+      "domainType": "firstParty",
+      "urlFilter": "/assets/gong-*.mp3|",
+      "resourceTypes": ["media"]
+    }
+  }
+]

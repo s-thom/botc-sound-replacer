@@ -2,13 +2,20 @@
   "$schema": "https://json.schemastore.org/chrome-manifest.json",
   "manifest_version": 3,
   "version": "0.0.1",
-  "name": "botc-sound-replacer",
-  "description": "A modern browser extension new tab page example built with Extension.js and TypeScript. Demonstrates how to create type-safe custom new tab pages with clean, maintainable code.",
+  "name": "BotC Sound Replacer",
+  "description": "Replace sounds in the official Blood on the Clocktower app.",
   "icons": {
     "48": "images/extension_48.png"
   },
-  "chrome_url_overrides": {
-    "newtab": "newtab/index.html"
+  "permissions": ["declarativeNetRequestWithHostAccess"],
+  "host_permissions": ["*://botc.app/*"],
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "gong", "enabled": true, "path": "/rules/gong.json" }
+    ]
   },
-  "author": "Your Name"
+  "web_accessible_resources": [
+    { "matches": ["<all_urls>"], "resources": ["sounds/*.mp3"] }
+  ],
+  "author": "Stuart Thomson"
 }
