@@ -1,9 +1,9 @@
-import { RULESET_VALUES } from "./rulesets";
+import { SOUND_DATA } from "./data";
 
 export async function loadSoundSettings(): Promise<
-  Record<string, number | undefined>
+  Record<string, string | undefined>
 > {
-  const values = await chrome.storage.local.get(Object.keys(RULESET_VALUES));
+  const values = await chrome.storage.local.get(Object.keys(SOUND_DATA));
   return values;
 }
 

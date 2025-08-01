@@ -9,23 +9,11 @@
   },
   "permissions": ["declarativeNetRequestWithHostAccess", "storage"],
   "host_permissions": ["*://botc.app/*"],
-  "declarative_net_request": {
-    "rule_resources": [
-      { "id": "gong", "enabled": false, "path": "/rules/gong.json" }
-    ]
-  },
   "web_accessible_resources": [
     { "matches": ["<all_urls>"], "resources": ["sounds/*.mp3"] }
   ],
-  "action": {
-    "default_popup": "pages/popup.html",
-    "default_icon": {
-      "48": "images/extension_48.png"
-    }
-  },
-  "background": {
-    "chromium:service_worker": "scripts/sw.ts",
-    "firefox:scripts": ["scripts/background.ts"]
-  },
+  "content_scripts": [
+    { "matches": ["*://botc.app/*"], "js": ["scripts/content.ts"] }
+  ],
   "author": "Stuart Thomson"
 }
