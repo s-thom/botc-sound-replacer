@@ -1,0 +1,43 @@
+name: Lint and Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run build
+        run: npm run build
+
+      - name: Chrome artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: chrome
+          path: dist/chrome
+
+      - name: Edge artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: edge
+          path: dist/edge
+
+      - name: Firefox artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firefox
+          path: dist/firefox
