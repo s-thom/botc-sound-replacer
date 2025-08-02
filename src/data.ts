@@ -1,36 +1,121 @@
 export interface SoundReplacement {
+  id: string;
   name: string;
   path: string;
 }
 
+const SOUNDS = {
+  quack: {
+    id: "quack",
+    name: "Quack",
+    path: "sounds/quack_5.mp3",
+  },
+  honk: {
+    id: "honk",
+    name: "Honk",
+    path: "sounds/honk.mp3",
+  },
+  discordJoin: {
+    id: "discordJoin",
+    name: "Discord join",
+    path: "sounds/discord-join.mp3",
+  },
+  discordLeave: {
+    id: "discordLeave",
+    name: "Discord leave",
+    path: "sounds/discord-leave.mp3",
+  },
+  discordPing: {
+    id: "discordPing",
+    name: "Discord ping",
+    path: "sounds/discord-ping.mp3",
+  },
+  villagerHrm: {
+    id: "villagerHrm",
+    name: "Minecraft Villager?",
+    path: "sounds/mc-villager-hrm.ogg",
+  },
+  villagerYes: {
+    id: "villagerYes",
+    name: "Minecraft Villager!",
+    path: "sounds/mc-villager-yes.ogg",
+  },
+  pinballStart: {
+    id: "pinballStart",
+    name: "Pinball startup",
+    path: "sounds/pinball-start.mp3",
+  },
+  pinballHighScore: {
+    id: "pinballHighScore",
+    name: "Pinball high score",
+    path: "sounds/pinball-high-score.mp3",
+  },
+  pinballEnd: {
+    id: "pinballEnd",
+    name: "Pinball game over",
+    path: "sounds/pinball-end.mp3",
+  },
+};
+
 export interface SoundData {
   inputId: string;
   pathMatch: RegExp;
-  sounds: Record<string, SoundReplacement>;
+  sounds: SoundReplacement[];
 }
 
-// "bell-Dl6tcyUb.mp3"
-// "clocktick-short-CIEfFW_G.mp3"
-// "clocktick-C0z0mAeb.mp3"
-// "countdown-DRzblIRW.mp3"
-// "doorclose-DJrIar29.mp3"
-// "dooropen-DUW4cfah.mp3"
-// "gong-DpHLo7G5.mp3"
-// "lock-Cx7LT4DF.mp3"
-// "timer-Ct7TV6TZ.mp3"
-// "vote-BUbYUp00.mp3"
-
 function viteAsset(assetName: string, extension: string): RegExp {
-  return new RegExp(`^/assets/${assetName}-[A-Za-z0-9_-]+${extension}`);
+  return new RegExp(`^/assets/${assetName}-[A-Za-z0-9_-]{8}${extension}`);
 }
 
 export const SOUND_DATA: Record<string, SoundData> = {
+  chatJoin: {
+    inputId: "sound-Publicchatenter",
+    pathMatch: viteAsset("dooropen", ".mp3"),
+    sounds: [],
+  },
+  chatLeave: {
+    inputId: "sound-Publicchatexit",
+    pathMatch: viteAsset("doorclose", ".mp3"),
+    sounds: [],
+  },
+  bell: {
+    inputId: "sound-Privatechatrequest",
+    pathMatch: viteAsset("bell", ".mp3"),
+    sounds: [],
+  },
+  chatPrivate: {
+    inputId: "sound-Privatechatenter",
+    pathMatch: viteAsset("lock", ".mp3"),
+    sounds: [],
+  },
+  clockTick: {
+    inputId: "sound-Voteclocktick",
+    pathMatch: viteAsset("clocktick", ".mp3"),
+    sounds: [],
+  },
+  clockTickShort: {
+    inputId: "sound-Voteclocktick1s",
+    pathMatch: viteAsset("clocktick-short", ".mp3"),
+    sounds: [],
+  },
+  vote: {
+    inputId: "sound-Votecast",
+    pathMatch: viteAsset("vote", ".mp3"),
+    sounds: [],
+  },
+  countdown: {
+    inputId: "sound-Countdown",
+    pathMatch: viteAsset("countdown", ".mp3"),
+    sounds: [],
+  },
   gong: {
     inputId: "sound-Attentiongong",
     pathMatch: viteAsset("gong", ".mp3"),
-    sounds: {
-      quack: { name: "Quack", path: "sounds/quack_5.mp3" },
-      honk: { name: "Honk", path: "sounds/honk.mp3" },
-    },
+    sounds: [SOUNDS.quack, SOUNDS.honk],
+  },
+  timer: {
+    inputId: "sound-Timerendgong",
+    pathMatch: viteAsset("timer", ".mp3"),
+    sounds: [SOUNDS.quack, SOUNDS.honk],
   },
 };

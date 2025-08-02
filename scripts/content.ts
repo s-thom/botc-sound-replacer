@@ -52,7 +52,9 @@ onSoundAdded((audio) => {
     return;
   }
 
-  const soundReplacement = data.sounds[settingValue!];
+  const soundReplacement = data.sounds.find(
+    (sound) => sound.id === settingValue
+  );
   if (soundReplacement == null) {
     return;
   }

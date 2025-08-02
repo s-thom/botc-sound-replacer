@@ -126,6 +126,9 @@ export function injectSoundSelectionOptions(
   );
 
   for (const [soundId, data] of Object.entries(SOUND_DATA)) {
+    if (data.sounds.length === 0) {
+      continue;
+    }
     const prevListItem = list.querySelector<HTMLLIElement>(
       `li:has(#${data.inputId})`
     );
@@ -146,8 +149,8 @@ export function injectSoundSelectionOptions(
       },
       [
         h("option", { value: "default", ...vAttributes }, "Default"),
-        ...Object.entries(data.sounds).map(([value, sound]) =>
-          h("option", { value, ...vAttributes }, sound.name)
+        ...data.sounds.map((sound) =>
+          h("option", { value: sound.id, ...vAttributes }, sound.name)
         ),
       ]
     );
