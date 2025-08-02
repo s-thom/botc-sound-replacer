@@ -12,9 +12,11 @@ If you have ideas for sounds, you can create an issue here on GitHub.
 
 ## Development instructions
 
+Requires a modern version of Node.js
+
 ```sh
 npm ci
-npm run dev
+npm run build
 ```
 
 Built files end up in `dist/<browser-name>`
