@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/chrome-manifest.json",
   "manifest_version": 3,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "name": "BotC Sound Replacer",
   "author": "Stuart Thomson",
   "description": "Replace sounds in the official Blood on the Clocktower app.",
