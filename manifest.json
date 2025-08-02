@@ -12,11 +12,12 @@
     "48": "images/icon-48.png"
   },
   "permissions": ["storage"],
-  "host_permissions": ["*://botc.app/*"],
   "web_accessible_resources": [
-    { "matches": ["<all_urls>"], "resources": ["sounds/*.mp3"] }
+    { "matches": ["*://botc.app/*"], "resources": ["sounds/*.mp3"] }
   ],
-  "content_scripts": [{ "matches": ["<all_urls>"], "js": ["src/content.ts"] }],
+  "content_scripts": [
+    { "matches": ["*://botc.app/*"], "js": ["src/content.ts"] }
+  ],
   "browser_specific_settings": {
     "gecko": {
       "id": "{84f7241e-6440-4fec-ac17-067357043e84}",
