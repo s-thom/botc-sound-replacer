@@ -8,7 +8,7 @@
     "email": "your@email.com",
     "url": "https://yourwebsite.com"
   },
-  "license": "MIT",
+  "license": "MPL-2.0",
   "type": "module",
   "devDependencies": {
     "extension": "^2.0.0-rc.38",
