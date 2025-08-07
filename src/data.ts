@@ -15,46 +15,6 @@ const SOUNDS = {
     name: "Honk",
     path: "sounds/honk.mp3",
   },
-  discordJoin: {
-    id: "discordJoin",
-    name: "Discord join",
-    path: "sounds/discord-join.mp3",
-  },
-  discordLeave: {
-    id: "discordLeave",
-    name: "Discord leave",
-    path: "sounds/discord-leave.mp3",
-  },
-  discordPing: {
-    id: "discordPing",
-    name: "Discord ping",
-    path: "sounds/discord-ping.mp3",
-  },
-  villagerHrm: {
-    id: "villagerHrm",
-    name: "Minecraft Villager?",
-    path: "sounds/mc-villager-hrm.ogg",
-  },
-  villagerYes: {
-    id: "villagerYes",
-    name: "Minecraft Villager!",
-    path: "sounds/mc-villager-yes.ogg",
-  },
-  pinballStart: {
-    id: "pinballStart",
-    name: "Pinball startup",
-    path: "sounds/pinball-start.mp3",
-  },
-  pinballHighScore: {
-    id: "pinballHighScore",
-    name: "Pinball high score",
-    path: "sounds/pinball-high-score.mp3",
-  },
-  pinballEnd: {
-    id: "pinballEnd",
-    name: "Pinball game over",
-    path: "sounds/pinball-end.mp3",
-  },
 };
 
 export interface SoundData {
