@@ -15,6 +15,11 @@ const SOUNDS = {
     name: "Honk",
     path: "sounds/honk.mp3",
   },
+  ariftown: {
+    id: "ariftown",
+    name: "Back to town",
+    path: "sounds/ARIF_comeonbacktotown.mp3",
+  },
 };
 
 export interface SoundData {
@@ -71,11 +76,11 @@ export const SOUND_DATA: Record<string, SoundData> = {
   gong: {
     inputId: "sound-Attentiongong",
     pathMatch: viteAsset("gong", ".mp3"),
-    sounds: [SOUNDS.quack, SOUNDS.honk],
+    sounds: [SOUNDS.quack, SOUNDS.honk, SOUNDS.ariftown],
   },
   timer: {
     inputId: "sound-Timerendgong",
     pathMatch: viteAsset("timer", ".mp3"),
-    sounds: [SOUNDS.quack, SOUNDS.honk],
+    sounds: [SOUNDS.quack, SOUNDS.honk, SOUNDS.ariftown],
   },
 };
