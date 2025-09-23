@@ -20,6 +20,31 @@ const SOUNDS = {
     name: "Back to town",
     path: "sounds/ARIF_comeonbacktotown.mp3",
   },
+  nootnoot: {
+    id: "nootnoot",
+    name: "Noot noot",
+    path: "sounds/noot-noot.mp3",
+  },
+  discordjoin: {
+    id: "discordjoin",
+    name: "Discord join",
+    path: "sounds/discord-join.mp3",
+  },
+  discordleave: {
+    id: "discordleave",
+    name: "Discord leave",
+    path: "sounds/discord-leave.mp3",
+  },
+  discordping: {
+    id: "discordping",
+    name: "Discord ping",
+    path: "sounds/discord-ping.mp3",
+  },
+  xppop: {
+    id: "xppop",
+    name: "Pop",
+    path: "sounds/pop.mp3",
+  },
 };
 
 export interface SoundData {
@@ -36,17 +61,17 @@ export const SOUND_DATA: Record<string, SoundData> = {
   chatJoin: {
     inputId: "sound-Publicchatenter",
     pathMatch: viteAsset("dooropen", ".mp3"),
-    sounds: [],
+    sounds: [SOUNDS.discordjoin],
   },
   chatLeave: {
     inputId: "sound-Publicchatexit",
     pathMatch: viteAsset("doorclose", ".mp3"),
-    sounds: [],
+    sounds: [SOUNDS.discordleave],
   },
   bell: {
     inputId: "sound-Privatechatrequest",
     pathMatch: viteAsset("bell", ".mp3"),
-    sounds: [],
+    sounds: [SOUNDS.discordping, SOUNDS.nootnoot, SOUNDS.xppop],
   },
   chatPrivate: {
     inputId: "sound-Privatechatenter",
@@ -76,11 +101,11 @@ export const SOUND_DATA: Record<string, SoundData> = {
   gong: {
     inputId: "sound-Attentiongong",
     pathMatch: viteAsset("gong", ".mp3"),
-    sounds: [SOUNDS.quack, SOUNDS.honk, SOUNDS.ariftown],
+    sounds: [SOUNDS.ariftown, SOUNDS.honk, SOUNDS.quack],
   },
   timer: {
     inputId: "sound-Timerendgong",
     pathMatch: viteAsset("timer", ".mp3"),
-    sounds: [SOUNDS.quack, SOUNDS.honk, SOUNDS.ariftown],
+    sounds: [SOUNDS.ariftown, SOUNDS.honk, SOUNDS.quack],
   },
 };

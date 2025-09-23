@@ -19,8 +19,13 @@ The versioning scheme is listed in the README.
 ### Added
 
 - Sounds
-  - "Come on back to town"
-    - Thanks to [Arif](https://www.twitch.tv/arif_a_) for providing this to me.
+  - Gong
+    - "Come on back to town"
+      - Thanks to [Arif](https://www.twitch.tv/arif_a_) for providing this to me.
+  - Chat request
+    - Ping sound from Discord
+    - "Noot noot" from Pingu
+    - Balloon "pop" from Windows XP
 
 ## v1.0.0 - 2023-08-02
 
