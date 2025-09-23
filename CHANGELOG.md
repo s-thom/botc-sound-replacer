@@ -16,6 +16,8 @@ The versioning scheme is listed in the README.
 
 ## Unreleased - DATE
 
+## v1.1.0 - 2025-09-23
+
 ### Added
 
 - Sounds
@@ -27,7 +29,7 @@ The versioning scheme is listed in the README.
     - "Noot noot" from Pingu
     - Balloon "pop" from Windows XP
 
-## v1.0.0 - 2023-08-02
+## v1.0.0 - 2025-08-02
 
 Initial release
 
