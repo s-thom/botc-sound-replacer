@@ -16,6 +16,17 @@ The versioning scheme is listed in the README.
 
 ## Unreleased - DATE
 
+## v1.2.0 - 2025-10-13
+
+### Known Issues
+
+- Labels for the switching sounds options are not localised correctly.
+
+### Updated
+
+- Now works on the latest version of the official website.
+- Options now show up if the UI is translated.
+
 ## v1.1.0 - 2025-09-23
 
 ### Added
