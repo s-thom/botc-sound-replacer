@@ -59,53 +59,53 @@ function viteAsset(assetName: string, extension: string): RegExp {
 
 export const SOUND_DATA: Record<string, SoundData> = {
   chatJoin: {
-    inputId: "sound-Publicchatenter",
-    pathMatch: viteAsset("dooropen", ".mp3"),
+    inputId: "sound-chatJoin",
+    pathMatch: viteAsset("chatjoin", ".mp3"),
     sounds: [SOUNDS.discordjoin],
   },
   chatLeave: {
-    inputId: "sound-Publicchatexit",
-    pathMatch: viteAsset("doorclose", ".mp3"),
+    inputId: "sound-chatLeave",
+    pathMatch: viteAsset("chatleave", ".mp3"),
     sounds: [SOUNDS.discordleave],
   },
   bell: {
-    inputId: "sound-Privatechatrequest",
-    pathMatch: viteAsset("bell", ".mp3"),
+    inputId: "sound-privateRequest",
+    pathMatch: viteAsset("privaterequest", ".mp3"),
     sounds: [SOUNDS.discordping, SOUNDS.nootnoot, SOUNDS.xppop],
   },
   chatPrivate: {
-    inputId: "sound-Privatechatenter",
-    pathMatch: viteAsset("lock", ".mp3"),
+    inputId: "sound-privateJoin",
+    pathMatch: viteAsset("privatejoin", ".mp3"),
     sounds: [],
   },
   clockTick: {
-    inputId: "sound-Voteclocktick",
-    pathMatch: viteAsset("clocktick", ".mp3"),
+    inputId: "sound-voteTick",
+    pathMatch: viteAsset("votetick", ".mp3"),
     sounds: [],
   },
   clockTickShort: {
-    inputId: "sound-Voteclocktick1s",
-    pathMatch: viteAsset("clocktick-short", ".mp3"),
+    inputId: "sound-voteTickShort",
+    pathMatch: viteAsset("votetickshort", ".mp3"),
     sounds: [],
   },
   vote: {
-    inputId: "sound-Votecast",
-    pathMatch: viteAsset("vote", ".mp3"),
+    inputId: "sound-voteCast",
+    pathMatch: viteAsset("votecast", ".mp3"),
     sounds: [],
   },
   countdown: {
-    inputId: "sound-Countdown",
+    inputId: "sound-countdown",
     pathMatch: viteAsset("countdown", ".mp3"),
     sounds: [],
   },
   gong: {
-    inputId: "sound-Attentiongong",
-    pathMatch: viteAsset("gong", ".mp3"),
+    inputId: "sound-attentionGong",
+    pathMatch: viteAsset("attentiongong", ".mp3"),
     sounds: [SOUNDS.ariftown, SOUNDS.honk, SOUNDS.quack],
   },
   timer: {
-    inputId: "sound-Timerendgong",
-    pathMatch: viteAsset("timer", ".mp3"),
+    inputId: "sound-timerGong",
+    pathMatch: viteAsset("timergong", ".mp3"),
     sounds: [SOUNDS.ariftown, SOUNDS.honk, SOUNDS.quack],
   },
 };
