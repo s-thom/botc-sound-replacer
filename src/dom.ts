@@ -1,4 +1,4 @@
-import { SOUND_DATA } from "./data";
+import { SOUND_DATA, type SoundId } from "./data";
 import { h } from "./h";
 
 export function onSoundAdded(callback: (audio: HTMLAudioElement) => void) {
@@ -43,8 +43,14 @@ export function onSoundVolumeMenuOpen(
           // Now observe #modal-title inside #settings for text changes
           const modalTitle = node.querySelector<HTMLDivElement>("#modal-title");
           if (modalTitle) {
+            const isSoundEffectsVolumeSettings = () => {
+              return !!node.querySelector(
+                `#${SOUND_DATA.chatJoin.inputId} ~ input`
+              );
+            };
+
             // In case the title is already set
-            if (modalTitle.textContent?.trim() === "Sound Effects Volume") {
+            if (isSoundEffectsVolumeSettings()) {
               callback(node);
             } else {
               let titleObserver: MutationObserver | null = null;
@@ -55,10 +61,7 @@ export function onSoundVolumeMenuOpen(
                       titleMutation.type === "characterData" ||
                       titleMutation.type === "childList"
                     ) {
-                      if (
-                        modalTitle.textContent?.trim() ===
-                        "Sound Effects Volume"
-                      ) {
+                      if (isSoundEffectsVolumeSettings()) {
                         callback(node);
                         break;
                       }
@@ -171,7 +174,7 @@ export function injectSoundSelectionOptions(
   }
 }
 
-export function getSoundId(audio: HTMLAudioElement): string | undefined {
+export function getSoundId(audio: HTMLAudioElement): SoundId | undefined {
   const srcUrl = new URL(audio.src, window.location.href);
   // TODO: Figure out if there's a better way (that's synchronous) to do an origin check.
   // Right now, this limits the extension to only working on the production release, even if
@@ -182,7 +185,7 @@ export function getSoundId(audio: HTMLAudioElement): string | undefined {
 
   for (const [soundId, data] of Object.entries(SOUND_DATA)) {
     if (data.pathMatch.test(srcUrl.pathname)) {
-      return soundId;
+      return soundId as SoundId;
     }
   }
 

@@ -57,7 +57,19 @@ function viteAsset(assetName: string, extension: string): RegExp {
   return new RegExp(`^/assets/${assetName}-[A-Za-z0-9_-]{8}${extension}`);
 }
 
-export const SOUND_DATA: Record<string, SoundData> = {
+export type SoundId =
+  | "chatJoin"
+  | "chatLeave"
+  | "bell"
+  | "chatPrivate"
+  | "clockTick"
+  | "clockTickShort"
+  | "vote"
+  | "countdown"
+  | "gong"
+  | "timer";
+
+export const SOUND_DATA: Record<SoundId, SoundData> = {
   chatJoin: {
     inputId: "sound-chatJoin",
     pathMatch: viteAsset("chatjoin", ".mp3"),
