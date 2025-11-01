@@ -25,19 +25,19 @@ jobs:
         run: npm run build
 
       - name: Chrome artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: chrome
           path: dist/chrome
 
       - name: Edge artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: edge
           path: dist/edge
 
       - name: Firefox artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: firefox
           path: dist/firefox
