@@ -16,6 +16,15 @@ The versioning scheme is listed in the README.
 
 ## Unreleased - DATE
 
+## v1.3.0 - 2026-10-28
+
+### Added
+
+- Add new sounds
+  - Minecraft door open and close (for entering and leaving chats)
+  - Minecraft XP Orb (for chat requests)
+  - Minecraft Bell (for chat requests and gongs)
+
 ## v1.2.0 - 2025-10-13
 
 ### Known Issues
