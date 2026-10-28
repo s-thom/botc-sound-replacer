@@ -42,8 +42,28 @@ const SOUNDS = {
   },
   xppop: {
     id: "xppop",
-    name: "Pop",
+    name: "Windows XP Pop",
     path: "sounds/pop.mp3",
+  },
+  mcdooropen: {
+    id: "mcdooropen",
+    name: "Minecraft Door Open",
+    path: "sounds/mc-open.ogg",
+  },
+  mcdoorclose: {
+    id: "mcdoorclose",
+    name: "Minecraft Door Close",
+    path: "sounds/mc-close.ogg",
+  },
+  mcbell: {
+    id: "mcbell",
+    name: "Minecraft Bell",
+    path: "sounds/mc-bell.ogg",
+  },
+  mcxporb: {
+    id: "mcxporb",
+    name: "Minecraft XP Orb",
+    path: "sounds/mc-orb.ogg",
   },
 };
 
@@ -73,17 +93,17 @@ export const SOUND_DATA: Record<SoundId, SoundData> = {
   chatJoin: {
     inputId: "sound-chatJoin",
     pathMatch: viteAsset("chatjoin", ".mp3"),
-    sounds: [SOUNDS.discordjoin],
+    sounds: [SOUNDS.discordjoin, SOUNDS.mcdooropen],
   },
   chatLeave: {
     inputId: "sound-chatLeave",
     pathMatch: viteAsset("chatleave", ".mp3"),
-    sounds: [SOUNDS.discordleave],
+    sounds: [SOUNDS.discordleave, SOUNDS.mcdoorclose],
   },
   bell: {
     inputId: "sound-privateRequest",
     pathMatch: viteAsset("privaterequest", ".mp3"),
-    sounds: [SOUNDS.discordping, SOUNDS.nootnoot, SOUNDS.xppop],
+    sounds: [SOUNDS.discordping, SOUNDS.nootnoot, SOUNDS.xppop, SOUNDS.mcxporb],
   },
   chatPrivate: {
     inputId: "sound-privateJoin",
@@ -113,11 +133,11 @@ export const SOUND_DATA: Record<SoundId, SoundData> = {
   gong: {
     inputId: "sound-attentionGong",
     pathMatch: viteAsset("attentiongong", ".mp3"),
-    sounds: [SOUNDS.ariftown, SOUNDS.honk, SOUNDS.quack],
+    sounds: [SOUNDS.ariftown, SOUNDS.honk, SOUNDS.quack, SOUNDS.mcbell],
   },
   timer: {
     inputId: "sound-timerGong",
     pathMatch: viteAsset("timergong", ".mp3"),
-    sounds: [SOUNDS.ariftown, SOUNDS.honk, SOUNDS.quack],
+    sounds: [SOUNDS.ariftown, SOUNDS.honk, SOUNDS.quack, SOUNDS.mcbell],
   },
 };
