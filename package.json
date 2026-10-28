@@ -2,7 +2,7 @@
   "private": true,
   "name": "botc-sound-replacer",
   "description": "A modern browser extension new tab page example built with Extension.js and TypeScript. Demonstrates how to create type-safe custom new tab pages with clean, maintainable code.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": {
     "name": "Your Name",
     "email": "your@email.com",
@@ -11,8 +11,9 @@
   "license": "MPL-2.0",
   "type": "module",
   "devDependencies": {
-    "extension": "^2.1.3",
-    "typescript": "^5.9.3"
+    "addons-linter": "^10.15.0",
+    "extension": "^4.1.36",
+    "typescript": "^7.0.2"
   },
   "scripts": {
     "dev": "extension dev --browser=firefox",

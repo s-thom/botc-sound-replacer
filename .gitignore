@@ -27,3 +27,6 @@ yarn-error.log*
 extension-env.d.ts
 
 .vscode/
+
+# Extension.js local session state
+.extension-js
