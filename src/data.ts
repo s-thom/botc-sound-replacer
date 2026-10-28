@@ -103,7 +103,13 @@ export const SOUND_DATA: Record<SoundId, SoundData> = {
   bell: {
     inputId: "sound-privateRequest",
     pathMatch: viteAsset("privaterequest", ".mp3"),
-    sounds: [SOUNDS.discordping, SOUNDS.nootnoot, SOUNDS.xppop, SOUNDS.mcxporb],
+    sounds: [
+      SOUNDS.discordping,
+      SOUNDS.nootnoot,
+      SOUNDS.xppop,
+      SOUNDS.mcxporb,
+      SOUNDS.mcbell,
+    ],
   },
   chatPrivate: {
     inputId: "sound-privateJoin",
